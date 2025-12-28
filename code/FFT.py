@@ -69,7 +69,7 @@ if __name__ == '__main__':
     ######### Magnitudes #########
     # Normalized Magnitude
     magnitudes = np.abs(spectrum) / N
-    magnitudes[1:] = magnitudes[1:] * 2.0 # Corrected for DC componenet in 0 Hz!
+    magnitudes[1:] = magnitudes[1:] * 2.0 # Corrected for DC component in 0 Hz!
     # Normalized Detrended Magnitude
     magnitudes_detrended = np.abs(spectrum_detrended) * 2.0 / N
     # Normalized Detrended-Windowed Magnitude
