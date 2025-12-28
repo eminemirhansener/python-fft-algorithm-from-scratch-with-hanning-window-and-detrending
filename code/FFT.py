@@ -43,9 +43,9 @@ if __name__ == '__main__':
     # Consider the signal as an analog sensor data with noises.
     main_signal = 5
     # Creating a signal with three different frequencies
-    freq1, amp1 = 50.5, 2.0   # 50 Hz component
-    freq2, amp2 = 280.7, 0.8  # 280 Hz component
-    freq3, amp3 = 400.2, 0.6  # 500 Hz component
+    freq1, amp1 = 50.5, 2.0   # 50.5 Hz component
+    freq2, amp2 = 280.7, 0.8  # 280.7 Hz component
+    freq3, amp3 = 400.2, 0.6  # 400.2 Hz component
     sig1 = amp1 * np.sin(2 * np.pi * freq1 * time)
     sig2 = amp2 * np.sin(2 * np.pi * freq2 * time)
     sig3 = amp3 * np.sin(2 * np.pi * freq3 * time)
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     spectrum_detrended = FFT(signal_detrended)
     spectrum_windowed = FFT(signal_windowed)
 
-    ######### Magnitudes #########
+    # --- Magnitudes ---
     # Normalized Magnitude
     magnitudes = np.abs(spectrum) / N
     magnitudes[1:] = magnitudes[1:] * 2.0 # Corrected for DC component in 0 Hz!
